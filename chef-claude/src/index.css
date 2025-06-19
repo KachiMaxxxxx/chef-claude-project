@@ -23,7 +23,7 @@ body {
   font-size: 32px;
   line-height: 60px;
   letter-spacing: -5%;
-  box-shadow: 0px 1px 3px 0px #0000001a, 0px 1px 2px 0px #0000000F;
+  box-shadow: 0px 1px 3px 0px #0000001a, 0px 1px 2px 0px #0000000f;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
@@ -31,4 +31,89 @@ body {
 
 .nav__text {
   color: #141413;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.input__form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4.375rem;
+  
+  
+  width: 50%;
+}
+.input__text {
+  background: #ffffff;
+  min-width:25rem;
+  height: 2.375rem;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  flex: 0 1 auto;
+
+  
+}
+.input__text::placeholder {
+  padding: 9px 13px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.14rem;
+  line-height: 1.25px;
+  letter-spacing: 0%;
+}
+
+.input__btn {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1.14rem;
+  line-height: 1.25rem;
+  letter-spacing: 0%;
+  border: none;
+  border-radius: 6px;
+  width: 11.4375rem;
+  padding: 9px 13px;
+  background: #141413;
+  color: #fafaf8;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  text-wrap: nowrap;
+  flex: 0 1 auto;
+  min-width:11.3425;
+}
+
+.input__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.list__header {
+  margin-top: 3rem;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.375rem;
+  letter-spacing: 0%;
+  color: #141413;
+  margin-bottom: 3.875rem;
+  width: 50%;
+}
+
+.input__list > li {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #475467;
+  margin-left:20px;
 }
