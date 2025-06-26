@@ -1,24 +1,43 @@
-import {useState} from "react";
+import { useState } from "react";
+
+export default function App() {
 
 
-export default function App(){
- 
+  
+  const allFavoriteThings = [
+    "💦🌹",
+    "😂",
+    "💡",
+    "🪔",
+    "🔥",
+    "🧤",
+    "🟤",
+    "🦥",
+    "🍎🍰",
+    "🚪",
+    "🔔",
+    "🦀🔔",
+    "🥩📺",
+    "🍑",
+  ];
+  const [myFavoriteThings, setMyFavoriteThings] = useState([]);
+  const thingsElements = myFavoriteThings.map((thing, index) => (
+    <p key={index}>{thing}</p>
+  ));
 
-const [isGoingOut, setIsGoingOut] = useState(true)
-  function handleClick(){
-    setIsGoingOut(active=> !active)
+  function addFavoriteThing() {
+    setMyFavoriteThings((prevFavThings) => [...prevFavThings, allFavoriteThings[prevFavThings.length]]);
+   
   }
-  return(
-  <main>
-    <h1>Do I feel like going out today?</h1>
-    <button onClick={handleClick}>{isGoingOut===true?"Yes": "No"}</button>
-  </main>
- )
-
-
-
-
-
-
-
+  return (
+    <main className="container">
+      <button className="button" onClick={addFavoriteThing}>
+        {" "}
+        Add Item{" "}
+      </button>
+      <section className="container" aria-live="polite">
+        {thingsElements}{" "}
+      </section>
+    </main>
+  );
 }
