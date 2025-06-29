@@ -4,9 +4,8 @@ export default function Main() {
    
     const [addIngredients,setIngredients] = useState(ingredients);
 
-  function submitForm(e) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  function submitForm(formData) {
+  
     const newIngredients = formData.get("Ingredients");
    
     
@@ -17,7 +16,7 @@ export default function Main() {
   return (
     <main>
       <div className="form__container">
-        <form className="input__form" onSubmit={submitForm}>
+        <form className="input__form" action={submitForm}>
           <input
             className="input__text"
             type="text"
