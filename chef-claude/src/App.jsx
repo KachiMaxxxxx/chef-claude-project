@@ -3,10 +3,15 @@ import Header from "./Header"
 import Body from "./Body"
 
 export default function App() {
+     const [userName, setUserName] = React.useState("Joe");
+     console.log(setUserName);
+
+     
     return (
         <main>
-            <Header />
-            <Body />
+            <Header userNames = {userName}/>
+            <Body userNames = {userName}
+             />
         </main>
     )
 }
