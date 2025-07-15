@@ -1,17 +1,23 @@
-import React from "react"
-import Header from "./Header"
-import Body from "./Body"
+import pads from "./pads";
+import { useState } from "react";
+import Pad from "./Pad";
 
-export default function App() {
-     const [userName, setUserName] = React.useState("Joe");
-     console.log(setUserName);
+export default function App({ darkMode }) {
+  const [arrayState, setArrayState] = useState(pads);
 
-     
-    return (
-        <main>
-            <Header userNames = {userName}/>
-            <Body userNames = {userName}
-             />
-        </main>
-    )
+  function handleClick(id) {
+    setArrayState((prev) =>
+      prev.map((item) => (item.id === id ? { ...item, on: !item.on } : item))
+    );
+  }
+
+  return (
+    <main>
+      <Pad
+        handleClick={handleClick}
+        arrayState={arrayState}
+        darkMode={darkMode}
+      />
+    </main>
+  );
 }
