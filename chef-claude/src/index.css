@@ -95,6 +95,12 @@ body {
 }
 
 .list__header {
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-top: 3rem;
   font-family: Inter;
   font-weight: 600;
   font-size: 1.875rem;
